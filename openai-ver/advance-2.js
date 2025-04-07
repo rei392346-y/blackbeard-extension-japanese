@@ -5,6 +5,8 @@ import { Readable } from "node:stream";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { promises as fs } from "node:fs";
+import dotenv from "dotenv";
+dotenv.config(); // .env の内容を読み込む
 
 // __dirname を取得するための設定
 const __filename = fileURLToPath(import.meta.url);
@@ -78,8 +80,7 @@ app.post("/", async (req, res) => {
   });
 
   const openai = new OpenAI({
-    baseURL: "https://api.githubcopilot.com",
-    apiKey: apiKey,
+    apiKey: process.env.API_KEY
   });
 
   // 最初は stream: false で関数呼び出しの有無を確認

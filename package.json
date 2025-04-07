@@ -9,6 +9,7 @@
   "type": "module",
   "dependencies": {
     "@octokit/core": "^6.1.2",
+    "dotenv": "^16.4.7",
     "express": "^4.19.2",
     "openai": "^4.91.1"
   }

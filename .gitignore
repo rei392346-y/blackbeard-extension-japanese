@@ -176,3 +176,6 @@ dist
 
 # Fly.io config
 fly.toml
+
+self-introduction.md
+backup
